@@ -1,0 +1,17 @@
+syntax = "proto3";
+option go_package = "github.com/Mihanynes/Ozon_api.git/converter";
+
+message CreateRequest{
+  string str = 1;
+}
+
+message CreateResponse{
+  string str = 1;
+}
+
+
+service Converter{
+  rpc GetUrl(CreateRequest) returns (CreateResponse) {}
+  rpc PostUrl(CreateRequest) returns (CreateResponse) {}
+}
+
